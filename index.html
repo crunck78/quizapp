@@ -3,20 +3,21 @@
         <title>QuizApp</title>
         <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
-    <body>
+    <body onload="nextQuestion()">
         <h1>The awsome HTML Quiz!!</h1>
         
         <div class="card">
-            <div class="card-body">
+            <div class="card-body" id="question">
                 In this section a question is asked!!
             </div>
           </div>
         <div class="mt-4">
-            <button class="btn btn-primary">Answer A</button>
-            <button class="btn btn-primary">Answer B</button>
-            <button class="btn btn-primary">Answer C</button>
-            <button class="btn btn-primary">Answer D</button>
+            <button onclick="answer('Robbie Williams')" id="answer1" class="btn btn-primary">Answer A</button>
+            <button onclick="answer('Lady Gaga')" id="answer2" class="btn btn-primary">Answer B</button>
+            <button onclick="answer('Tim Berners-Lee')" id="answer3" class="btn btn-primary">Answer C</button>
+            <button onclick="answer('Justin Bieber')" id="answer4" class="btn btn-primary">Answer D</button>
         </div>
     </body>
 </html>
