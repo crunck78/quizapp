@@ -7,6 +7,13 @@
     </head>
     <body onload="nextQuestion()">
         <h1>The awsome HTML Quiz!!</h1>
+
+        <div class="alert alert-success d-none" role="alert" id="right-answer">
+           Your Answer was Right!!
+          </div>
+          <div class="alert alert-danger d-none" role="alert" id="wrong-answer">
+            Your Answer was Wrong!!
+          </div>
         
         <div class="card" id="quiz">
             <div class="card-body" id="question">
@@ -14,10 +21,10 @@
             </div>
           </div>
         <div class="mt-4" id="answers">
-            <button onclick="answer('Robbie Williams')" id="answer1" class="btn btn-primary">Answer A</button>
-            <button onclick="answer('Lady Gaga')" id="answer2" class="btn btn-primary">Answer B</button>
-            <button onclick="answer('Tim Berners-Lee')" id="answer3" class="btn btn-primary">Answer C</button>
-            <button onclick="answer('Justin Bieber')" id="answer4" class="btn btn-primary">Answer D</button>
+            <button onclick="answer(1)" id="answer1" class="btn btn-primary">Answer A</button>
+            <button onclick="answer(2)" id="answer2" class="btn btn-primary">Answer B</button>
+            <button onclick="answer(3)" id="answer3" class="btn btn-primary">Answer C</button>
+            <button onclick="answer(4)" id="answer4" class="btn btn-primary">Answer D</button>
         </div>
     </body>
 </html>
