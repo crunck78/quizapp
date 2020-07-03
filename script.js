@@ -1,24 +1,4 @@
-//alert("Let the games Begin!!");
-
-var quizes = [];
-var questions = [ 'How has invented HTML?' ];
-var answers = [ 'Robbie Williams', 'Lady Gaga', 'Tim Berners-Lee', 'Justin Bieber' ];
-
-function init(n){
-	for( var i = 0; i < n; i++)
-	{
-		quizes.push( createQuiz() );
-	}
-}
-
-function createQuizList() {
-	var quize = document.createElement('div');
-	var question = document.createElement('div');
-	var answerContainer = document.createElement('div');
-	quize.classList.add('card');
-	question.classList.add('card-body');
-	answerContainer.classList.add('mt-4');
-}
+//alert('LET THE GAME BEGIN');
 
 function nextQuestion() {
     document.getElementById("question").innerHTML = 'How has invented HTML?';
