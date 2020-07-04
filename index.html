@@ -1,30 +1,57 @@
 <html>
-    <head>
-        <title>QuizApp</title>
-        <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
-    <body onload="nextQuestion()">
-        <h1>The awsome HTML Quiz!!</h1>
 
-        <div class="alert alert-success d-none" role="alert" id="right-answer">
-           Your Answer was Right!!
-          </div>
-          <div class="alert alert-danger d-none" role="alert" id="wrong-answer">
-            Your Answer was Wrong!!
-          </div>
-        
-        <div class="card" id="quiz">
-            <div class="card-body" id="question">
-                In this section a question is asked!!
-            </div>
-          </div>
-        <div class="mt-4" id="answers">
-            <button onclick="answer(1)" id="answer1" class="btn btn-primary">Answer A</button>
-            <button onclick="answer(2)" id="answer2" class="btn btn-primary">Answer B</button>
-            <button onclick="answer(3)" id="answer3" class="btn btn-primary">Answer C</button>
-            <button onclick="answer(4)" id="answer4" class="btn btn-primary">Answer D</button>
+<head>
+    <title>QuizApp</title>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="nextQuestion()">
+    <h1>The awesome HTML Quiz!!</h1>
+
+    <nav class="navbar navbar-light bg-primary navbar-custom">
+        <a class="navbar-brand" href="#">
+            <img src="img/question-mark.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            HTML Quiz!
+        </a>
+    </nav>
+
+    <div class="alert alert-success d-none" role="alert" id="right-answer">
+        Your Answer was Right!!
+    </div>
+    <div class="alert alert-danger d-none" role="alert" id="wrong-answer">
+        Your Answer was Wrong!!
+    </div>
+
+    <div class="card" id="quiz">
+        <div class="card-body" id="question">
+            In this section a question is asked!!
         </div>
-    </body>
+    </div>
+    <div class="mt-4" id="answers">
+        <button onclick="answer(1)" id="answer1" class="btn btn-outline-primary">Answer A</button>
+        <button onclick="answer(2)" id="answer2" class="btn btn-outline-primary">Answer B</button>
+        <button onclick="answer(3)" id="answer3" class="btn btn-outline-primary">Answer C</button>
+        <button onclick="answer(4)" id="answer4" class="btn btn-outline-primary">Answer D</button>
+    </div>
+
+    <div class="mt-4">
+        <button onclick="nextQuestion()" id="next-btn" class="btn btn-info d-none">Next Question</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-dark footer-custom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://developerakademie.com/" target="blank"> Developer Akademie</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+</body>
+
 </html>

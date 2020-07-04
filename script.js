@@ -1,12 +1,20 @@
 //alert('LET THE GAME BEGIN');
-
+var question_1 = 'How has invented HTML?';
+var question_2 = 'What stands for HTML Tag?'
 var answer_1 = 'Robbie Williams';
 var answer_2 = 'Lady Gaga';
 var answer_3 = 'Tim Berners-Lee';
 var answer_4 = 'Justin Bieber';
 
+
+
 function nextQuestion() {
-    document.getElementById("question").innerHTML = 'How has invented HTML?';
+    if(document.getElementById("question").innerHTML == question_1) {
+        document.getElementById("question").innerHTML = question_2;
+    }
+    else {
+        document.getElementById("question").innerHTML = question_1;
+    }
     document.getElementById("answer1").innerHTML = answer_1;
     document.getElementById("answer2").innerHTML = answer_2;
     document.getElementById("answer3").innerHTML = answer_3;
@@ -28,9 +36,11 @@ function answer(a) {
 
     //alert('You answerd ' + selected_answer );
 
-    if(selected_answer == answer_3) {
+    if(selected_answer == answer_3) { // right answer
         document.getElementById('wrong-answer').classList.add('d-none');
         document.getElementById('right-answer').classList.remove('d-none');
+        //Show next button
+        document.getElementById('next-btn').classList.remove('d-none');
     } else {
         document.getElementById('wrong-answer').classList.remove('d-none');
         document.getElementById('right-answer').classList.add('d-none');
