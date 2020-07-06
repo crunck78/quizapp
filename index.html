@@ -2,6 +2,7 @@
 
 <head>
     <title>QuizApp</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -9,44 +10,52 @@
 
 <body onload="nextQuestion()">
     <h1>The awesome HTML Quiz!!</h1>
+	
+  <div id="quiz-finished-container" class="d-none">
+	You Won!!
+	<img src="img/fireworks.png">
+  </div>
 
-    <nav class="navbar navbar-light bg-primary navbar-custom">
-        <a class="navbar-brand" href="#">
-            <img src="img/question-mark.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            HTML Quiz!
-        </a>
-    </nav>
+  <div id="quiz-container">
+      <nav class="navbar navbar-light bg-primary navbar-custom">
+          <a class="navbar-brand" href="#">
+              <img src="img/question-mark.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              HTML Quiz!
+          </a>
+      </nav>
 
-    <div class="alert alert-success d-none" role="alert" id="right-answer">
-        Your Answer was Right!!
-    </div>
-    <div class="alert alert-danger d-none" role="alert" id="wrong-answer">
-        Your Answer was Wrong!!
-    </div>
+      <div class="alert alert-success d-none" role="alert" id="right-answer">
+          Your Answer was Right!!
+      </div>
+      <div class="alert alert-danger d-none" role="alert" id="wrong-answer">
+          Your Answer was Wrong!!
+      </div>
 
-    <div class="card" id="quiz">
-        <div class="progress">
-            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
-        </div>
-        <div class="card-body" id="question">
-            In this section a question is asked!!
-        </div>
-    </div>
-    <div class="mt-4" id="answers">
-        <div class="quiz-answer-row">
-            <button onclick="answer(1)" id="answer1" class="btn btn-outline-primary">Answer A</button>
-            <button onclick="answer(2)" id="answer2" class="btn btn-outline-primary">Answer B</button>
-        </div>
-        <div class="quiz-answer-row mt-4">
-            <button onclick="answer(3)" id="answer3" class="btn btn-outline-primary">Answer C</button>
-            <button onclick="answer(4)" id="answer4" class="btn btn-outline-primary">Answer D</button>
-        </div>
+      <div class="card" id="quiz">
+          <div class="progress">
+              <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+          </div>
+          <div class="card-body" id="question">
+              In this section a question is asked!!
+          </div>
+      </div>
+      <div class="mt-4" id="answers">
+          <div class="quiz-answer-row">
+              <button onclick="answer(1)" id="answer1" class="btn btn-outline-primary">Answer A</button>
+              <button onclick="answer(2)" id="answer2" class="btn btn-outline-primary">Answer B</button>
+          </div>
+          <div class="quiz-answer-row mt-4">
+              <button onclick="answer(3)" id="answer3" class="btn btn-outline-primary">Answer C</button>
+              <button onclick="answer(4)" id="answer4" class="btn btn-outline-primary">Answer D</button>
+          </div>
 
 
-    </div>
+      </div>
 
-    <div class="mt-4">
-        <button onclick="nextQuestion()" id="next-btn" class="btn btn-info d-none">Next Question</button>
+      <div class="mt-4">
+          <button onclick="nextQuestion()" id="next-btn" class="btn btn-info d-none">Next Question</button>
+      </div>
+	
     </div>
 
     <!-- Footer -->
