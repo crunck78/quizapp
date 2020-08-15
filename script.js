@@ -1,5 +1,3 @@
-//alert('LET THE GAME BEGIN');
-
 var allQuestions = [
 	{
 		'question' : 'How has invented HTML?',
