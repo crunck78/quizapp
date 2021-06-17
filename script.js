@@ -42,9 +42,6 @@ function nextQuestion() {
 	}
 	else {
 		question_number = question_number + 1;
-		progress = Math.round(question_number / allQuestions.length * 100);
-    	document.getElementById('progress-bar').innerHTML = progress + '%';
-    	document.getElementById('progress-bar').style.width = progress + '%';
    		loadQuestion();
 	}
 }
@@ -71,6 +68,11 @@ function answer(a) {
         document.getElementById('right-answer').classList.remove('d-none');
         //Show next button
         document.getElementById('next-btn').classList.remove('d-none');
+		//Calculate and Show Progress 
+		progress = Math.round(question_number / allQuestions.length * 100);
+		document.getElementById('progress-bar').innerHTML = progress + '%';
+    	document.getElementById('progress-bar').style.width = progress + '%';
+		
     } else {
         document.getElementById('wrong-answer').classList.remove('d-none');
         document.getElementById('right-answer').classList.add('d-none');
